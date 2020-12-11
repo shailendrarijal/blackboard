@@ -1,8 +1,27 @@
 import { useState, useEffect } from "react"
-import nepaliAppVocab from './nepaliAppVocab'
 
 export default function NaatiVocabulary() {
-    
+  const nepaliAppVocab = {
+    commonPhrases: [
+      {
+        id: 1,
+        englishWord: "What is your name?",
+        nepaliWord: "तपाईकाे नाम के हो?",
+        nepaliWordPronunce: ""
+      },
+      {
+        id: 2,
+        englishWord: "How much is this?",
+        nepaliWord: "यो कति हो",
+        nepaliWordPronunce: ""
+      },
+      {
+        id: 3,
+        englishWord: "Where are you going?",
+        nepaliWord: "तिमि कहाँ जादै छौ?",
+        nepaliWordPronunce: ""
+      }]
+  };
     const [englishWord, setEnglishWord] = useState("English Word");
     const [nepaliWord, setNepaliWord] = useState("नेपाली शब्द");
     const [counter, setCounter] = useState(0);
