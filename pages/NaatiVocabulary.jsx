@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+
 export default function NaatiVocabulary() {
   const vocab = {
     business: [
