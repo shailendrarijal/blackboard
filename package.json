@@ -16,5 +16,8 @@
     "react-dom": "16.13.1",
     "react-router-dom": "^5.2.0",
     "webpack": "^4.44.2"
+  },
+  "devDependencies": {
+    "@netlify/plugin-nextjs": "^1.0.2"
   }
 }
