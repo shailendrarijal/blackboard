@@ -1,4 +1,4 @@
-export const vocab = {
+export default vocab = {
     business: [
       {
         id: 1,
