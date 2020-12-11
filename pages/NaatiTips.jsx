@@ -42,7 +42,11 @@ export default function NaatiTips() {
                                 Learn and practice note-taking habits
                                 </Accordion.Toggle>
                                 <Accordion.Collapse eventKey="3">
+<<<<<<< HEAD
                                 <Card.Body>While it is important to take notes, initially it is really hard to listen and write at the same time. It needs a lot of practice. When you are practicing, do not only follow the vocabulary, but practice dialogs with note-taking and build that note-taking habit. </Card.Body>
+=======
+                                <Card.Body>While it is important to take notes, initially it is really hard to listen and write at the same time. It needs a lot of practice. When you are practicing, do not only follow the vocabulary, but practice dialogs with note-taking and build that note-taking habit.</Card.Body>
+>>>>>>> 300fd16dcb7c662bdd819cec32d0348189c4e4ce
                                 </Accordion.Collapse>
                             </Card>
                             <Card>
@@ -129,7 +133,11 @@ export default function NaatiTips() {
                                 Ask for correction
                                 </Accordion.Toggle>
                                 <Accordion.Collapse eventKey="4">
+<<<<<<< HEAD
                                 <Card.Body>The same goes for correction. While it is not clearly stated if you would lose points for corrections, it is always advised that you ask for a correction if you know for sure that you made a mistake. Please make sure to announce words like "Correction" for the examiner to know that was a correction part. </Card.Body>
+=======
+                                <Card.Body>The same goes for correction. While it is not clearly stated if you would lose points for corrections, it is always advised that you ask for a correction if you know for sure that you made a mistake. Please make sure to announce words like "Correction" for the examiner to know that was a correction part.</Card.Body>
+>>>>>>> 300fd16dcb7c662bdd819cec32d0348189c4e4ce
                                 </Accordion.Collapse>
                             </Card>
                             <Card>

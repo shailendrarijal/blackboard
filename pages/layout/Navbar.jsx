@@ -10,8 +10,8 @@ export default function Navbars() {
             <Navbar.Collapse id="basic-navbar-nav">
 
                 <Form inline className="ml-auto">
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-success">Search</Button>
+                <FormControl type="text" placeholder="Search" className="mr-sm-2" disabled/>
+                <Button variant="outline-success" disabled>Search</Button>
                 </Form>
                 <Nav className="ml-auto">
                     <NavDropdown title="Services" id="basic-nav-dropdown">
