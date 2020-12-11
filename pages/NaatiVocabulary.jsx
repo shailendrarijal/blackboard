@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import vocab from './api/vocab'
+import vocab from './vocab'
 
 export default function NaatiVocabulary() {
     
