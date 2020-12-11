@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import nepaliAppVocab from './api/nepaliAppVocab'
+import nepaliAppVocab from './nepaliAppVocab'
 
 export default function NaatiVocabulary() {
     
