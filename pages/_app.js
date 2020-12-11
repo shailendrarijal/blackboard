@@ -1,7 +1,39 @@
 import '../styles/globals.css'
+import 'bootstrap/dist/css/bootstrap.css'
+import Navbars from './layout/Navbar'
+import Footer from './layout/Footer'
+import {Button} from 'react-bootstrap'
+
+
+
+
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  
+  
+
+  return (
+    <div>
+      <Navbars />
+      <aside className="col-lg-2 col-md-3 col-sm-12">
+        <Button href="./NaatiApp" className="btn-primary btn-md button-transparent asideButton">Naati App</Button>
+      </aside>
+       <div className="body-container">
+        <section className="col-lg-8 col-md-8 col-sm-12 mx-5">
+          <Component {...pageProps} />
+        </section>
+      </div>
+      
+       <Footer />
+
+
+
+      <style jsx>{`
+
+      `}</style>
+  
+    </div>
+    )
 }
 
 export default MyApp
