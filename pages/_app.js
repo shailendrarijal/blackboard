@@ -4,13 +4,17 @@ import Navbars from './layout/Navbar'
 import Footer from './layout/Footer'
 import {Button} from 'react-bootstrap'
 
+import TagManager from 'react-gtm-module'
+const tagManagerArgs = {
+  id: 'GTM-NJB6J4S'
+}
 
 
-
-
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
   
-  
+  useEffect(() => {
+    TagManager.initialize(tagManagerArgs)
+  }, []);
 
   return (
     <div>

@@ -9,7 +9,7 @@ export default function CarouselDiv() {
             <Carousel.Item className="carouselImage">
               <img
                 className="d-block w-100"
-                src="carousel1.jpg"
+                src="carousel1.JPG"
                 alt="First slide"
               />
               <Carousel.Caption>

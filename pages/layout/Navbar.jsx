@@ -5,7 +5,7 @@ export default function Navbars() {
     <div>
       
         <Navbar bg="dark" variant="dark" expand="lg" className="navbar">
-            <Navbar.Brand href="/">BlackBoard Nepal</Navbar.Brand>
+            <Navbar.Brand href="/" className="logo-text">BlackBoard Nepal</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
 
@@ -17,13 +17,13 @@ export default function Navbars() {
                     <NavDropdown title="Services" id="basic-nav-dropdown">
                       <NavDropdown.Item href="/Naati">NAATI</NavDropdown.Item>
                       <NavDropdown.Item href="/Calculator" disabled>Calculator</NavDropdown.Item>
-
                     </NavDropdown>
                     <NavDropdown title="Wiki" id="basic-nav-dropdown">
                         <NavDropdown.Item href="/Traditions" disabled>Traditions</NavDropdown.Item>
                         <NavDropdown.Item href="/Places" disabled>Places</NavDropdown.Item>
                         <NavDropdown.Item href="/Cuisine" disabled>Food and Drinks</NavDropdown.Item>
                     </NavDropdown>
+                    <NavLink href="/About" disabled>About</NavLink>
                     <NavLink href="/LoginSignup" disabled>Login/Signup</NavLink>
                 </Nav>
                 
@@ -34,25 +34,16 @@ export default function Navbars() {
       <style jsx global>{`
     
         .navbar{
-            padding: 0 0.5rem;
-            box-shadow: 0 5px #ccc;
-        }
-        {/* .nav-link, .navbar-brand{
-        color: #efefef;
-        cursor: pointer;
-        }
-
-        .nav-link{
-        margin-right: 1em !important;
-        }
-
-        .nav-link:hover{
-        background:#efefef;
-        color: #003893; */}
+          padding: 0 0.5rem;
+          box-shadow: 0 5px #ccc;
         }
 
         .navbar-collapse{
-        justify-content: flex-end;
+          justify-content: flex-end;
+        }
+
+        .logo-text{
+          font-family: Oxygen;
         }
       `}</style>
 
