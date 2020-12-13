@@ -7,7 +7,7 @@ export default function Naati() {
     return (
       <div>
             <div>
-                <h4 className="text-center">Get ready for your Naati!</h4>
+                <h4 className="text-center">Free practice material for your NAATI test!</h4>
                     <Tabs variant="pills" bg="success">
                         <Tab eventKey={NaatiTestFormat} title="Test Format">
                             <NaatiTestFormat />
