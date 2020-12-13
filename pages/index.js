@@ -15,7 +15,7 @@ export default function Home() {
       <h3 className="text-center mb-2">Welcome to the Club!</h3>
         <div>
           <Carousel />
-      </div>
+        </div>
      
      
     </div>

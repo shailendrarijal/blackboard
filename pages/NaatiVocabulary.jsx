@@ -2449,8 +2449,7 @@ export default function NaatiVocabulary() {
               setNepaliWord(wordsArray[counter].nepaliWord);
               }
   
-            } 
-            console.log(counter);
+        }
       });
     
 

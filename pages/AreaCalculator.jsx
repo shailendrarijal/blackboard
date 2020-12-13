@@ -5,23 +5,20 @@ import { useState } from "react";
 export default function AreaCalculator() {
 
     function handleEnglishUnitChange(changeEvent) {
-        setSelectedEnglishUnit(changeEvent.target.value);
+        const EnglishUnit = changeEvent.target.value;
+        setSelectedEnglishUnit(EnglishUnit);
     }
     function handleNepaliUnitChange(changeEvent) {
-        setSelectedNepaliUnit(changeEvent.target.value);        
+        const NepaliUnit = changeEvent.target.value;
+        setSelectedNepaliUnit(NepaliUnit);  
     }
-
+    
     function calculateEnglishValue() {
-        if ((areaNepaliDaam == 0 && areaNepaliPaisa == 0 && areaNepaliAana == 0 && areaNepaliRopani == 0) || (areaNepaliDhur == 0 && areaNepaliKatha == 0 && areaNepaliBigha == 0)) {
-            setAreaEnglishMetreSquare(0);
-            setAreaEnglishSquareFoot(0);
-        }
         switch (selectedNepaliUnit) {
             case 'radio-ropani':
                
                 let valueInMetreSquareForRopani = ((areaNepaliDaam*1.99)+(areaNepaliPaisa*7.95)+(areaNepaliAana*342.25)+(areaNepaliRopani*508.72));
                 setAreaEnglishMetreSquare(valueInMetreSquareForRopani.toFixed(3));
-                console.log(valueInMetreSquareForRopani);
                 let valueInSquareFootForRopani = ((areaNepaliDaam*21.39)+(areaNepaliPaisa*85.56)+(areaNepaliAana*342.25)+(areaNepaliRopani*5476));
                 setAreaEnglishSquareFoot(valueInSquareFootForRopani.toFixed(3));
                 break;
@@ -39,90 +36,82 @@ export default function AreaCalculator() {
     }
 
     function calculateNepaliValue() {
-        if (areaEnglishMetreSquare == 0 || areaEnglishSquareFoot == 0) {
-            setAreaNepaliDaam(0);
-            setAreaNepaliPaisa(0);
-            setAreaNepaliAana(0);
-            setAreaNepaliRopani(0);
-            setAreaNepaliDhur(0);
-            setAreaNepaliKatha(0);
-            setAreaNepaliBigha(0);
-        } else {
-            switch (selectedEnglishUnit && selectedNepaliUnit) {
-             case 'radio-m2' && 'radio-ropani':
+   
+            switch (selectedEnglishUnit) {
+             case 'radio-m2':
                  
                  // FOR ROPANI CALCULATION IN METRE SQUARE 
                  let valueInDaamForMetreSquare = (areaEnglishMetreSquare / 1.99);
-                 var quotientForRopani = Math.floor(valueInDaamForMetreSquare / 256);
+                 let quotientForRopani = Math.floor(valueInDaamForMetreSquare / 256);
                  setAreaNepaliRopani(quotientForRopani.toFixed(3));
                  let remainderAfterRopani = (valueInDaamForMetreSquare % 256);
                  if (remainderAfterRopani > 0) {
-                     var quotientForAana = Math.floor(remainderAfterRopani / 16);
-                 }
-                 setAreaNepaliAana(quotientForAana.toFixed(3));
-                 let remainderAfterAana = (remainderAfterRopani % 16);
-                 if (remainderAfterAana > 0) {
-                     var quotientForPaisa = Math.floor(remainderAfterAana / 4);
-                 }
-                 setAreaNepaliPaisa(quotientForPaisa.toFixed(3));
-                 let remainderAfterPaisa = (remainderAfterAana % 4);
-                    setAreaNepaliDaam(remainderAfterPaisa.toFixed(3));
-                    break;
-                case 'radio-m2' && 'radio-bigha':
+                     let quotientForAana = Math.floor(remainderAfterRopani / 16);
+                    setAreaNepaliAana(quotientForAana.toFixed(3));
+                    let remainderAfterAana = (remainderAfterRopani % 16);
+                    if (remainderAfterAana > 0) {
+                        let quotientForPaisa = Math.floor(remainderAfterAana / 4);
+                        setAreaNepaliPaisa(quotientForPaisa.toFixed(3));
+                        let remainderAfterPaisa = (remainderAfterAana % 4);
+                        setAreaNepaliDaam(remainderAfterPaisa.toFixed(3));
+                     };
+                    
+                    };
+                 
                  // FOR BIGHA CALCULATION IN METRE SQUARE 
                  let valueInDhurForMetreSquare = (areaEnglishMetreSquare / 16.93);
-                 var quotientForBigha = Math.floor(valueInDhurForMetreSquare / 400);
+                 let quotientForBigha = Math.floor(valueInDhurForMetreSquare / 400);
                  setAreaNepaliBigha(quotientForBigha.toFixed(3));
                  let remainderAfterBigha = (valueInDhurForMetreSquare % 400);
                  if (remainderAfterBigha > 0) {
-                     var quotientForKatha = Math.floor(remainderAfterBigha / 20);
-                 }
-                 setAreaNepaliKatha(quotientForKatha.toFixed(3));
-                 let remainderAfterKatha = (remainderAfterBigha % 20);
-                 setAreaNepaliDhur(remainderAfterKatha.toFixed(3));
-                    break;
+                     let quotientForKatha = Math.floor(remainderAfterBigha / 20);
+                     setAreaNepaliKatha(quotientForKatha.toFixed(3));
+                    let remainderAfterKatha = (remainderAfterBigha % 20);
+                    setAreaNepaliDhur(remainderAfterKatha.toFixed(3));
+                    };
+                break;
                 
-             case 'radio-sqft' && 'radio-ropani':
+                case 'radio-sqft':
                 
                  // FOR ROPANI CALCULATION IN SQUARE FOOT
-                 let valueInDaamForSquareFoot = (areaEnglishSquareFoot / 21.39);
-                 var quotientForRopaniInSqft = Math.floor(valueInDaamForSquareFoot / 256);
+                    let valueInDaamForSquareFoot = (areaEnglishSquareFoot / 21.39);
+                    let quotientForRopaniInSqft = Math.floor(valueInDaamForSquareFoot / 256);
                  setAreaNepaliRopani(quotientForRopaniInSqft.toFixed(3));
-                 let remainderAfterRopaniInSqft = (valueInDaamForSquareFoot % 256);
+                    let remainderAfterRopaniInSqft = (valueInDaamForSquareFoot % 256);
                  if (remainderAfterRopaniInSqft > 0) {
-                     var quotientForAanaInSqft = Math.floor(remainderAfterRopaniinSqft / 16);
-                 }
-                 setAreaNepaliAana(quotientForAanaInSqft.toFixed(3));
-                 let remainderAfterAanaInSqft = (remainderAfterRopaniInSqft % 16);
-                 if (remainderAfterAanaInSqft > 0) {
-                     var quotientForPaisaInSqft = Math.floor(remainderAfterAanaInSqft / 4);
-                 }
-                 setAreaNepaliPaisa(quotientForPaisaInSqft.toFixed(3));
-                 let remainderAfterPaisaInSqft = (remainderAfterAanaInSqft % 4);
-                    setAreaNepaliDaam(remainderAfterPaisaInSqft.toFixed(3));
+                     let quotientForAanaInSqft = Math.floor(remainderAfterRopaniInSqft / 16);
+                     setAreaNepaliAana(quotientForAanaInSqft.toFixed(3));
+                     let remainderAfterAanaInSqft = (remainderAfterRopaniInSqft % 16);
+                    if (remainderAfterAanaInSqft > 0) {
+                        let quotientForPaisaInSqft = Math.floor(remainderAfterAanaInSqft / 4);
+                        setAreaNepaliPaisa(quotientForPaisaInSqft.toFixed(3));
+                        let remainderAfterPaisaInSqft = (remainderAfterAanaInSqft % 4);
+                        setAreaNepaliDaam(remainderAfterPaisaInSqft.toFixed(3));
+                     };
+                    
+                    };
+                 
+                    // FOR BIGHA CALCULATION IN SQUARE FOOT
+                    let valueInDhurForSquareFoot = (areaEnglishSquareFoot / 182.25);
+                    let quotientForBighaInSqft = Math.floor(valueInDhurForSquareFoot / 400);
+                    setAreaNepaliBigha(quotientForBighaInSqft.toFixed(3));
+                    let remainderAfterBighaInSqft = (valueInDhurForSquareFoot % 400);
+                    if (remainderAfterBighaInSqft > 0) {
+                        let quotientForKathaInSqft = Math.floor(remainderAfterBighaInSqft / 20);
+                        setAreaNepaliKatha(quotientForKathaInSqft.toFixed(3));
+                        let remainderAfterKathaInSqft = (remainderAfterBighaInSqft % 20);
+                        setAreaNepaliDhur(remainderAfterKathaInSqft.toFixed(3));
+                        };
+                 
                     break;
-                case 'radio-sqft' && 'radio-bigha':
-                // FOR BIGHA CALCULATION IN SQUARE FOOT
-                 let valueInDhurForSquareFoot = (areaEnglishSquareFoot / 182.25);
-                 var quotientForBighaInSqft = Math.floor(valueInDhurForSquareFoot / 400);
-                 setAreaNepaliBigha(quotientForBighaInSqft.toFixed(3));
-                 let remainderAfterBighaInSqft = (valueInDhurForSquareFoot % 400);
-                 if (remainderAfterBighaInSqft > 0) {
-                     var quotientForKathaInSqft = Math.floor(remainderAfterBighaInSqft / 20);
-                 }
-                 setAreaNepaliKatha(quotientForKathaInSqft.toFixed(3));
-                 let remainderAfterKathaInSqft = (remainderAfterBighaInSqft % 20);
-                 setAreaNepaliDhur(remainderAfterKathaInSqft.toFixed(3));
-                 break;
-             default:
-                 break;
-         }
-        }
+                default:
+                break;
+        };
          
     }
 
-    const [selectedEnglishUnit, setSelectedEnglishUnit] = useState("radio-m2");
-    const [selectedNepaliUnit, setSelectedNepaliUnit] = useState("radio-ropani");
+    const [selectedEnglishUnit, setSelectedEnglishUnit] = useState('radio-m2');
+    const [selectedNepaliUnit, setSelectedNepaliUnit] = useState('radio-ropani');
     
     const [areaEnglishMetreSquare, setAreaEnglishMetreSquare] = useState(0);
     const [areaEnglishSquareFoot, setAreaEnglishSquareFoot] = useState(0);
