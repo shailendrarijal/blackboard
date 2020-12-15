@@ -12,26 +12,26 @@ export default function Naati() {
         <div>
             
             {displayBox? 
-            <div className="text-center">
-                <h3>Get ready for your Naati Test</h3>
-                <p>Naati CCL is a community language test in a language other than English. This test is conducted by National Association of Accredited Translators and Interprtors (NAATI). Passing this test not only gives you extra 5 points for your Permanent Residency application but also provides you with a good understanding of Australian community.</p> 
-                    <button className="button-transparent btn-md btn-primary button mx-auto" onClick={changeDisplay}>Naati app</button>
+            <div>
+                <h3>Get ready for your Naati CCL Nepali Test</h3>
+                <p>Use our free NAATI CCL Nepali test resources to practice for your upcoming NAATI CCL Nepali test. Go to our NAATI app to get section-wise information for format, vocabulary, and tips for your NAATI CCL Nepali test.</p> 
+                    <button className="btn-lg btn-primary button mx-auto align-center" onClick={changeDisplay}>NAATI app</button>
                     <div className="row">
-                    <div className="card testFormat lg-col-4 md-col-6 sm-col-12">
-                        <h4 className="card-header">Test Format</h4>
-                        <div className="card-body">Learn about the test format, marking structure, pass marks, and test environment</div>
+                        <div className="card testFormat col-lg-3 col-md-5 col-sm-12">
+                            <h4 className="card-header">Test Format</h4>
+                            <div className="card-body">Learn about the test format, marking structure, pass marks, and test environment</div>
+                            
+                        </div>
+                        <div className="card vocabulary col-lg-3 col-md-5 col-sm-12">
+                        <h4 className="card-header">Vocabulary</h4>
+                            <div className="card-body">Build your vocabulary with our vocabulary app and get ready for the test</div>
                         
-                    </div>
-                    <div className="card vocabulary lg-col-4 md-col-6 sm-col-12">
-                    <h4 className="card-header">Vocabulary</h4>
-                        <div className="card-body">Build your vocabulary with our vocabulary app and get ready for the test</div>
-                       
-                    </div>
-                    <div className="card tips lg-col-4 md-col-6 sm-col-12">
-                    <h4 className="card-header">Tips</h4>
-                        <div className="card-body">Have a look at some of the tips that will help you prepare and give your best in examination</div>
-                      
-                    </div>
+                        </div>
+                        <div className="card tips col-lg-3 col-md-5 col-sm-12">
+                        <h4 className="card-header">Tips</h4>
+                            <div className="card-body">Have a look at some of the tips that will help you prepare and give your best in your test</div>
+                        
+                        </div>
                     </div>
                 </div>
                 :
@@ -47,17 +47,14 @@ export default function Naati() {
         <style jsx>{`
             .card{
                 margin: 3rem auto;
-                width: 30%;
             }
+
           .button{
               padding: 0.5rem;
               box-shadow: 0.1rem 0.1rem #ccc;
-              border-radius: 10px; 
+              border-radius: 10px;
           }
-          .button:hover{
-              text-decoration: none;
-              cursor: pointer;
-          }
+          
         `}</style>
   
       </div>

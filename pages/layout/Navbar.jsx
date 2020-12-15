@@ -1,10 +1,10 @@
-import {Navbar, Nav, NavDropdown, Form, FormControl, Button, NavLink} from 'react-bootstrap'
+import {Navbar, Nav, NavDropdown, NavLink} from 'react-bootstrap'
 
 export default function Navbars() {
   return (
     <div>
       
-        <Navbar bg="dark" variant="dark" expand="lg" className="navbar">
+        <Navbar bg="dark" variant="dark" expand="lg" className="navbar fixed-top">
             <Navbar.Brand href="/" className="logo-text">BlackBoard Nepal</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -15,16 +15,16 @@ export default function Navbars() {
                 </Form> */}
                 <Nav className="ml-auto">
                     <NavDropdown title="Services" id="basic-nav-dropdown">
-                      <NavDropdown.Item href="/Naati">NAATI</NavDropdown.Item>
-                      <NavDropdown.Item href="/Calculator">Calculator</NavDropdown.Item>
+                      <NavDropdown.Item href="/naati">NAATI</NavDropdown.Item>
+                      <NavDropdown.Item href="/calculator">Calculator</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Wiki" id="basic-nav-dropdown">
-                        <NavDropdown.Item href="/Traditions" disabled>Traditions</NavDropdown.Item>
-                        <NavDropdown.Item href="/Places" disabled>Places</NavDropdown.Item>
-                        <NavDropdown.Item href="/Cuisine" disabled>Food and Drinks</NavDropdown.Item>
+                        <NavDropdown.Item href="/traditions" disabled>Traditions</NavDropdown.Item>
+                        <NavDropdown.Item href="/places" disabled>Places</NavDropdown.Item>
+                        <NavDropdown.Item href="/cuisine" disabled>Food and Drinks</NavDropdown.Item>
                     </NavDropdown>
-                    <NavLink href="/About">About</NavLink>
-                    <NavLink href="/LoginSignup" disabled>Login/Signup</NavLink>
+                    <NavLink href="/about">About</NavLink>
+                    <NavLink href="/loginSignup" disabled>Login/Signup</NavLink>
                 </Nav>
                 
             </Navbar.Collapse>
@@ -43,7 +43,7 @@ export default function Navbars() {
         }
 
         .logo-text{
-          font-family: Oxygen;
+          font-family: Verdana;
         }
       `}</style>
 

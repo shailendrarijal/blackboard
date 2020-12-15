@@ -2481,14 +2481,16 @@ export default function NaatiVocabulary() {
           
           {displayButtons? 
             <div className="row">
-              {counter<=0? <button className="btn-light button-md mx-auto buttonNav" disabled>Previous</button>:<button className=" btn-primary button-md mx-auto buttonNav" onClick={() => setCounter(counter-1)}>Previous</button>}
+              {counter <= 0 ? <button className="btn-light button-md mx-auto buttonNav" disabled>Previous</button> : <button className=" btn-primary button-md mx-auto buttonNav" onClick={() => setCounter(counter - 1)}>Previous</button>}
+              
+              <span>{counter+1}</span>
               
               {counter<wordsArray.length-1? <button className="btn-primary button-md mx-auto buttonNav" onClick={() => setCounter(counter+1)}>Next</button>: <button className=" btn-light button-md mx-auto buttonNav" disabled>Next</button>  }
               
 
           </div>:<p className="text-center">Select a category to get words!</p>
           }
-          
+          <p className="my-4">Send us more words for Nepali Naati CCL test to add in this app at our <a href="https://www.facebook.com/blackboardnepal">Facebook page</a></p>
         </div>
   
         <style jsx>{`

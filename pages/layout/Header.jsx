@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Navbars from './Navbar'
 import CarouselDiv from './Carousel'
+import Navbars from './layout/Navbar'
 
 export default function Header() {
   return (
@@ -15,9 +16,6 @@ export default function Header() {
       
 
       <style jsx global>{`
-        main{
-            padding:0;
-        }
       `}</style>
 
     </div>

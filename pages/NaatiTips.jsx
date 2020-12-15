@@ -157,7 +157,8 @@ export default function NaatiTips() {
                                 </Accordion.Collapse>
                             </Card>
                             
-                        </Accordion>                       
+                            </Accordion>
+                        <p className="my-4">If you have more tips for fellow Nepali NAATI CCL test takers, send them to us at our <a href="https://www.facebook.com/blackboardnepal">Facebook page</a> </p>    
                     </div>
                 </Tab>
             

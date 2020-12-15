@@ -176,15 +176,13 @@ export default function AreaCalculator() {
                                 <div className="ropani-container">
                                 
                                     <input type="number" className="input-nepali-area-calculator" name="inputRopani-ropani" onChange={(e) => setAreaNepaliRopani(e.target.value)} min={0} value={areaNepaliRopani}></input>
-                                
-                                    <input type="number" className="input-nepali-area-calculator" name="inputRopani-aana" onChange={(e)=>setAreaNepaliAana(e.target.value)} min={0} max={15} value={areaNepaliAana}></input>
-                                
-                                    <input type="number" className="input-nepali-area-calculator" name="inputRopani-paisa" onChange={(e)=>setAreaNepaliPaisa(e.target.value)} min={0} max={3} value={areaNepaliPaisa}></input>
-                                
-                                    <input type="number" className="input-nepali-area-calculator" name="inputRopani-daam" onChange={(e)=>setAreaNepaliDaam(e.target.value)} min={0} max={3} value={areaNepaliDaam}></input>
                                     <label htmlFor="inputRopani-ropani" className="input-nepali-area-calculator">Ropani</label>
+                                    <input type="number" className="input-nepali-area-calculator" name="inputRopani-aana" onChange={(e)=>setAreaNepaliAana(e.target.value)} min={0} max={15} value={areaNepaliAana}></input>
                                     <label htmlFor="inputRopani-aana" className="input-nepali-area-calculator">Aana</label>
+
+                                    <input type="number" className="input-nepali-area-calculator" name="inputRopani-paisa" onChange={(e)=>setAreaNepaliPaisa(e.target.value)} min={0} max={3} value={areaNepaliPaisa}></input>
                                     <label htmlFor="inputRopani-paisa" className="input-nepali-area-calculator">Paisa</label>
+                                    <input type="number" className="input-nepali-area-calculator" name="inputRopani-daam" onChange={(e)=>setAreaNepaliDaam(e.target.value)} min={0} max={3} value={areaNepaliDaam}></input>
                                     <label htmlFor="inputRopani-daam" className="input-nepali-area-calculator">Daam</label><br></br>
 
                                     <button className="btn-outline-success btn-sm m-3 align-center" onClick={() => calculateEnglishValue()}>To English</button>
@@ -192,14 +190,12 @@ export default function AreaCalculator() {
                                 <div className="bigha-container">
                                 
                                     <input type="number" className="input-nepali-area-calculator" name="inputBigha-bigha" onChange={(e) => setAreaNepaliBigha(e.target.value)} min={0} value={areaNepaliBigha}></input>
-                                    
+                                    <label htmlFor="inputBigha-bigha" className="input-nepali-area-calculator">Bigha</label>
                                 
                                     <input type="number" className="input-nepali-area-calculator" name="inputBigha-katha" onChange={(e) => setAreaNepaliKatha(e.target.value)} min={0} max={20} value={areaNepaliKatha}></input>
-                                
-                                
-                                    <input type="number" className="input-nepali-area-calculator" name="inputBigha-dhur" onChange={(e)=>setAreaNepaliDhur(e.target.value)} min={0} max={20} value={areaNepaliDhur}></input><br></br>
-                                    <label htmlFor="inputBigha-bigha" className="input-nepali-area-calculator">Bigha</label>
                                     <label htmlFor="inputBigha-katha" className="input-nepali-area-calculator">Katha</label>
+                                
+                                    <input type="number" className="input-nepali-area-calculator" name="inputBigha-dhur" onChange={(e)=>setAreaNepaliDhur(e.target.value)} min={0} max={20} value={areaNepaliDhur}></input>
                                     <label htmlFor="inputBigha-dhur" className="input-nepali-area-calculator">Dhur</label> <br></br>
                                     <button className="btn-outline-success btn-sm m-3 align-center" onClick={() => calculateEnglishValue()}>To English</button>
                                 </div>
@@ -207,6 +203,7 @@ export default function AreaCalculator() {
                     </div>
                 </div>
                 <div className="unitDisplay-container col-lg-3 col-md-4 col-sm-12">
+                    <p><strong>Conversion Units</strong></p>
                     <p>1 bigha = 20 kattha = 6,772.63 m² = 72,900 sq.ft = 13.31 ropani</p>
                     <p>1 kattha = 20 dhur = 338.63 m² = 3,645 sq.ft.</p>
                     <p>1 dhur = 16.93 m² = 182.25 sq.ft</p>

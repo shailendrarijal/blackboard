@@ -22,6 +22,7 @@ h5,
 h6 {
   color: teal;
   margin-bottom: 1rem;
+  margin-top: 0;
 }
 
 a {
@@ -34,16 +35,17 @@ a {
 }
 
 section {
-  margin: auto;
-  padding: 0.5rem 2rem;
   float: left;
+  padding: 3rem 0;
+  /* margin: 0 auto; */
+  /* padding: 0.5rem 2rem; */
 }
 
 aside {
-  float: left;
+  float: right;
   overflow-y: auto;
   overflow-x: hidden;
-  padding: 1.5rem 0;
+  padding: 3rem 0 0 0;
 }
 
 .asideButton {
@@ -54,11 +56,15 @@ aside {
 .btn-primary {
   padding: 0.5rem;
   background-color: #003893 !important;
-  border-color: #003893 !important;
+  border-color: #28a745 !important;
 }
-
-.body-container {
-  min-height: 90vh;
+.btn-linkedIn {
+  background-color: #0e76a8 !important;
+}
+.button:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #28a745 !important;
 }
 
 @media only screen and (max-width: 600px) {

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import AreaCalculator from './AreaCalculator';
-import LengthCalculator from './LengthCalculator';
+import VolumeCalculator from './VolumeCalculator';
 import WeightCalculator from './WeightCalculator';
 
 
@@ -17,8 +17,8 @@ export default function Calculator() {
   function showCalculator() {
       if (calculatorType === "WeightCalculator") {
         return <WeightCalculator />
-      } else if (calculatorType === "LengthCalculator") {
-        return <LengthCalculator />
+      } else if (calculatorType === "VolumeCalculator") {
+        return <VolumeCalculator />
       } else {
         return <AreaCalculator />
       }
@@ -27,17 +27,17 @@ export default function Calculator() {
     return (
       <div>
         <div >
-          <h3>Calculator</h3>
-          <p>Select measurement </p>
+          <h3>Nepali Unit converter</h3>
+          <p>Use our simple to use online converter tool to convert units from Nepali measurement system to English measurement system. Select land area, volume or weight, enter the value and hit the button to convert to Nepali units or to english units</p>
         
-          <button className="btn-primary button-sm mx-auto" onClick={() => setCalculator("AreaCalculator")}>Area</button>
-          <button className="btn-primary button-sm mx-auto" onClick={() => setCalculator("LengthCalculator")}>Length</button>
+          <button className="btn-primary button-sm mx-auto" onClick={() => setCalculator("AreaCalculator")}>Land Area</button>
+          <button className="btn-primary button-sm mx-auto" onClick={() => setCalculator("VolumeCalculator")}>Volume</button>
           <button className="btn-primary button-sm mx-auto" onClick={() => setCalculator("WeightCalculator")}>Weight</button>
           <div className="container">
             {showCalculator()}
           </div>
           <div>
-            
+            {/* A place where description for the calculators or in general the use of Nepali units are to be described */}
           </div>
         </div>
          

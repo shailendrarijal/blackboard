@@ -19,23 +19,24 @@ function MyApp ({ Component, pageProps }) {
 
   return (
     <div>
-      <Navbars />
-      <aside className="col-lg-2 col-md-3 col-sm-12">
-        <Button href="./NaatiApp" className="btn-primary btn-md button-transparent asideButton my-1">Naati App</Button>
-        <Button href="./Calculator" className="btn-primary btn-md button-transparent asideButton my-1">Nepali Calculators</Button>
-      </aside>
-       <div className="body-container">
-        <section className="col-lg-8 col-md-8 col-sm-12 mx-5">
+    <Navbars/>
+        <section className="col-lg-8 col-md-8 col-sm-12 mt-3">
           <Component {...pageProps} />
         </section>
-      </div>
-      
-       <Footer />
-
+      <aside className="col-lg-3 col-md-3 col-sm-12 mt-2">
+        <h6>Our Social Media pages</h6>
+          <Button href="https://www.facebook.com/blackboardnepal" className="btn-primary btn-sm button-transparent button my-1">Facebook</Button>
+          <Button href="https://www.linkedin.com/company/blackboard-nepal" className="btn-primary btn-linkedIn btn-sm button-transparent my-1">LinkedIn</Button>
+        <hr></hr>  
+        <h6>Our Apps</h6>
+          <Button href="/naati" className="btn-primary btn-md button-transparent asideButton button my-1">Nepali NAATI CCL</Button>
+          <Button href="/calculator" className="btn-primary btn-md button-transparent asideButton button my-1">Nepali Unit Converter</Button>
+        </aside>
+        <Footer />
 
 
       <style jsx>{`
-
+        
       `}</style>
   
     </div>
