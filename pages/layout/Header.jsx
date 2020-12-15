@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import Navbars from './Navbar'
 import CarouselDiv from './Carousel'
-import Navbars from './layout/Navbar'
 
 export default function Header() {
   return (
