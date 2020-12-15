@@ -1,9 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 import Carousel from './layout/Carousel';
-import Navbars from './layout/Navbar'
-import Footer from './layout/Footer'
-import {Button} from 'react-bootstrap'
 
 export default function Home() {
   return (
